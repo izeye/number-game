@@ -25,8 +25,10 @@ public class Main {
             int questionCount = 0;
             List<String> wrongAnswers = new ArrayList<>();
 
-            int end = 2;
-            for (int i = 2; i <= end; i++) {
+            int number  = 4;
+            int start = number;
+            int end = number;
+            for (int i = start; i <= end; i++) {
                 for (int j = 1; j <= 9; j++) {
                     questionCount++;
 
