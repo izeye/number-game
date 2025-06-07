@@ -33,9 +33,14 @@ public class Main {
                     questionCount++;
 
                     String question = String.format("%d x %d = ", i, j);
-                    System.out.print(question);
+                    int yourAnswer;
+                    do {
+                        System.out.print(question);
+                        yourAnswer = scanner.nextInt();
+                        System.out.format("Is your answer '%s'? (y/n) ", yourAnswer);
+                    } while (!scanner.next().equals("y"));
+
                     int answer = i * j;
-                    int yourAnswer = scanner.nextInt();
                     if (yourAnswer == answer) {
                         System.out.println("Correct!");
                         playSound("sounds/correct.wav");
